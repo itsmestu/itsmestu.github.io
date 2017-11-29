@@ -1,41 +1,66 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
     <title>ITSME</title>
-
+    <link href="public/css/iSlider.css" rel="stylesheet">
     <!-- Bootstrap -->
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" 
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
         crossorigin="anonymous">
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-
-    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" 
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
-        crossorigin="anonymous"></script>    
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
     <style>
         html,body {
             height:100%;
             width: 100%;
         }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #333;
+            overflow: hidden;
+        }
+
+        /*ul wrapper*/
+        #iSlider-wrapper {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            position: absolute;
+        }
+
+        #iSlider-wrapper ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #iSlider-wrapper li {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-pack: center;
+            -webkit-box-align: center;
+            list-style: none;
+        }
+
+        #iSlider-wrapper li img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
         .container{
             padding-right: 0px; 
-            padding-left: 0px;
+            padding-left: 0px; 
             overflow: hidden;
             height:100%;
             width: 100%
@@ -73,11 +98,25 @@
             background-repeat:   no-repeat;
             background-position: center center;  
         }
+
+        .content-container2{
+            width: 100%;
+            height: 100%;
+            background-image: url('./imgs/page2.jpg');   
+            background-size:    cover;                      /* <------ */
+            background-repeat:   no-repeat;
+            background-position: center center;  
+        }
+
     </style>
 
-  </head>
-  <body>
-    
+</head>
+<body>
+
+
+<div id="iSlider-wrapper"></div>
+
+<div id="hidden-space" style="display:none">
     <div class="container">
         <!-- header   -->
         <div class="topmenu-container">
@@ -86,19 +125,95 @@
                 <span class="glyphicon glyphicon-menu-hamburger glyphicon-lg topmenu-container-menu-right"></span>
             </div>
         </div>
-
         <!-- 首屏第一个div  -->
         <div class="content-container">
-
-        </div>
-
-        <!-- 首屏第一个div  -->
-        <div class="content-container">
-                
         </div>
 
     </div>
-    
+</div>
 
-  </body>
+<div id="hidden-space2" style="display:none">
+    <div class="container">
+        <div class="content-container2">
+        </div>
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript" src="public/js/iSlider.js"></script>
+<script type="text/javascript" src="public/js/iSlider.animate.js"></script>
+<script id="show-code">
+    var list = [
+        // // HTML String
+        // {
+        //     content: '<div style="font-size:4em;color:white;text-align: center">HTML String</div>'
+        // },
+        // element
+        // {
+        //     content: (function () {
+        //         var dom = document.createElement('div');
+        //         dom.innerHTML = 'Element';
+        //         dom.style.cssText = 'font-size:3em;color:rgb(230, 230, 63);';
+        //         return dom;
+        //     })()
+        // },
+        // fragment
+        // {
+        //     content: (function () {
+        //         var frag = document.createDocumentFragment();
+        //         var img = new Image()
+        //         var dom = document.createElement('div');
+        //         dom.innerHTML = 'Fragment';
+        //         dom.style.cssText = 'font-size:3em;color:rgb(230, 63, 230);';
+        //         frag.appendChild(dom);
+        //         return frag;
+        //     })()
+        // },
+        // dom
+        {
+            content: document.querySelector('#hidden-space > div')
+        },
+        // picture
+        {
+            content: document.querySelector('#hidden-space2 > div')
+        },
+        // iframe
+        // {
+        //     content: '' +
+        //     '<div style="padding-top:.2em;font-size:3em;color:rgb(230, 63, 230);position:absolute;top:0;left:0;height:100%;width:100%;z-index:1">' +
+        //     '<span style="padding:.2em;background-color:black;">Iframe</span>' +
+        //     '</div>' +
+        //     '<iframe style="position:relative;z-index:0;height:100%;" src="http://mobile.baidu.com"></iframe>'
+        // }
+    ];
+
+    var S = new iSlider({
+        dom: document.getElementById('iSlider-wrapper'),
+        data: list,
+        isAutoplay: 0,
+        isLooping: 0,
+        isOverspread: 1,
+        animateTime: 800,
+        isVertical: true
+    });
+</script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+        crossorigin="anonymous"></script>    
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</body>
 </html>
