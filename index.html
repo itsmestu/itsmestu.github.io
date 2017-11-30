@@ -6,6 +6,7 @@
           content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
     <title>ITSME</title>
     <link href="public/css/iSlider.css" rel="stylesheet">
+    <link href="static/animate.css" rel="stylesheet">
     <!-- Bootstrap -->
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" 
@@ -97,6 +98,7 @@
             background-size:     cover;                      /* <------ */
             background-repeat:   no-repeat;
             background-position: center center;  
+            position: relative;
         }
 
         .content-container2{
@@ -105,8 +107,55 @@
             background-image: url('./imgs/page2.jpg');   
             background-size:    cover;                      /* <------ */
             background-repeat:   no-repeat;
-            background-position: center center;  
+            background-position: center center; 
         }
+
+        .first-page-info-block{
+            position: absolute;
+            left: 10%;
+            top: 30%;
+            /* height: 150px; */
+            width: 180px;
+            background: white;
+            padding: 0 20px 0 20px;
+        }
+        .branchName{
+            font-size:36px;
+            font-weight:bold;
+            margin-top:20px;
+            margin-bottom:0px;
+            line-height:40px;
+            text-align:center;
+            letter-spacing:5px;
+        }
+        .branchSlogan{
+            font-size:18px;
+            font-weight:400;
+            margin-top:2px;
+            letter-spacing:1px;
+        }
+        .brandSpliter{
+            height: 0.4px;
+            margin-top: 25px;
+            border: 0.4px solid black;
+            margin: 15px 30px 0 0;
+        }
+        .branchDetail{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            letter-spacing:1px;
+            font-size: 16px;
+            position: relative;
+        }
+        .branchDetail-arrow{
+            position: absolute;
+            right: 30px;
+            top: 7px;
+            content: '';
+            width: 8px;
+            height: 10px;
+        }
+       
 
     </style>
 
@@ -127,6 +176,14 @@
         </div>
         <!-- 首屏第一个div  -->
         <div class="content-container">
+            <div class="first-page-info-block">
+                <p class="branchName">ITSME</p>
+                <p class="branchSlogan">品牌定位事务所</p>
+                <div class="brandSpliter"></div> 
+                <p class="branchDetail">detail
+                    <img class="branchDetail-arrow" src="static/index-arrow-gray.png">
+                </p>
+            </div>
         </div>
 
     </div>
