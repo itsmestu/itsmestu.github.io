@@ -101,15 +101,6 @@
             position: relative;
         }
 
-        .content-container2{
-            width: 100%;
-            height: 100%;
-            background-image: url('./imgs/page2.jpg');   
-            background-size:    cover;                      /* <------ */
-            background-repeat:   no-repeat;
-            background-position: center center; 
-        }
-
         .first-page-info-block{
             position: absolute;
             left: 10%;
@@ -156,7 +147,54 @@
             width: 4px;
             height: 6px;
         }
-       
+        .content-container2{
+            width: 100%;
+            height: 100%;
+            background-size:    cover;                      /* <------ */
+            background-repeat:   no-repeat;
+            background-position: center center; 
+            background-color: #282828;
+        }
+
+        .content-container2-topContainer{
+            width: 100%;
+            height: 65%;
+            background-color:#2c3f72;
+            background-image: url(./static/logo.png);
+            background-repeat: no-repeat;
+            background-position: 50% 15%;
+            background-size: 20%;
+            padding-top: 35%;
+        }
+
+        .topContainer-contact{
+            height: 80px;
+            /* border-top: 1px solid white; */
+            /* border-bottom: 1px solid white; */
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            color: white;
+            margin-left: 10%;
+            margin-right: 10%;
+            padding-top: 25px;
+        }
+        
+        .topContainer-contact-item{
+            height: 10px;
+        }
+
+        .topContainer-desc{
+            margin-top: 20px;
+            color: white;
+            font-weight: 300;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        .content-container2-bottomContainer{
+            width: 100%;
+            height: 40%;
+        }
 
     </style>
 
@@ -168,7 +206,7 @@
 
 <div id="hidden-space" style="display:none">
     <div class="container">
-        <!-- header   -->
+        <!-- header  -->
         <div class="topmenu-container">
             <img src="./static/logo.png" class="topmenu-container-logo"/>
             <div class="topmenu-container-menu">
@@ -193,6 +231,27 @@
 <div id="hidden-space2" style="display:none">
     <div class="container">
         <div class="content-container2">
+            <div class="content-container2-topContainer">
+                <div class="topContainer-contact">
+                    <p class="topContainer-contact-item">微信: ITSME STUDIO</p>
+                    <p class="topContainer-contact-item">Email: ITSME@163.com</p>
+                </div>
+                <div class="topContainer-desc">
+                    渠道扩展，市场挖崛，模式探索，一直是大部分公司的核心命题。随着现代审美的不断提高和信息传播效率的加速
+                    <span>视觉，调性，感受，在品牌表现过程中表现的尤为重要</span>
+                    品牌后期的持续发力，会让市场挖掘，事半功倍
+                    渠道的开发过程也因品牌的知名度提高而更加主动，
+                    模式的调整也因品牌的清晰不在晦涩
+                    <span>
+                        而设计是实现品牌的主要手段。
+                    </span>
+                    <br/>
+                    It's Me品牌设计事务所会通过对品牌调性的挖崛，结合平面，3D，动画，交互，线上的表达，多维度的表达一个个性化的品牌形象。
+                </div>
+            </div>
+            <div class="content-container2-bottomContainer">
+
+            </div>
         </div>
     </div>
 </div>
