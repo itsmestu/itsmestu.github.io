@@ -3,7 +3,12 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport"
-          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+          content="width=100px,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
     <title>ITSME</title>
     <link href="public/css/iSlider.css" rel="stylesheet">
     <link href="static/animate.css" rel="stylesheet">
@@ -165,6 +170,7 @@
             background-position: 50% 15%;
             background-size: 20%;
             padding-top: 35%;
+            overflow: hidden;
         }
 
         .topContainer-contact{
@@ -184,7 +190,7 @@
         }
 
         .topContainer-desc{
-            margin-top: 15px;
+            margin-top: 6%;
             color: white;
             font-weight: 300;
             font-size: 12px;
@@ -199,12 +205,11 @@
 
         .ourBusiness{
             display: inline-block;
-            margin: 20px 40px 0px 10%;
+            margin: 20px 40px 25px 10%;
             padding-bottom: 20px;
             border-bottom: 1px solid white;
             color: white;
             font-size:14px;
-            margin-bottom: 25px;
         }
         .ourBusiness-title{
             margin: 0;
@@ -224,6 +229,106 @@
             font-size: 12px;
             font-weight: 400;
 
+        }
+
+        @media screen and (max-width:320px){
+            .content-container2-topContainer{
+                height:58%;
+            }
+            .topContainer-desc{
+                margin-top:4%;
+            }
+            .ourBusiness{
+                display: inline-block;
+                margin: 15px 40px 20px 10%;
+                padding-bottom: 15px;
+                font-size: 14px;
+            }
+        }
+
+        /* ipad */
+        @media screen and (min-width:768px) {
+            .content-container2-topContainer{
+                height: 63%;
+            }
+            .topContainer-desc {
+                margin-top: 15px;
+                color: white;
+                font-weight: 300;
+                font-size: 20px;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            .topContainer-contact-item {
+                height: 14px;
+                font-size: 20px;
+            }
+            .topContainer-contact {
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            .topContainer-contact p:nth-child(1){
+                margin-bottom: 20px;
+            }
+            .ourBusiness{
+                margin-top: 5%;
+                font-size: 20px;
+            }
+            .ourBusiness-title{
+                font-size: 18px;
+            }
+            .ourBusiness-desc{
+                font-size: 18px;
+            }
+            .topContainer-desc{
+                margin-top: 7%;
+            }
+        }
+         /* ipad pro or pc*/
+         @media screen and (min-width:1024px) {
+            .topContainer-contact{
+                border-top: 2px solid white;
+                border-bottom: 2px solid white;
+            } 
+            .content-container2-topContainer{
+                height: 63%;
+            }
+            .topContainer-desc {
+                margin-top: 15px;
+                color: white;
+                font-weight: 300;
+                font-size: 26px;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            .topContainer-contact-item {
+                height: 25px;
+                font-size: 26px;
+            }
+            .topContainer-contact {
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+            .topContainer-contact p:nth-child(1){
+                margin-bottom: 20px;
+            }
+            .ourBusiness{
+                margin-top: 5%;
+                font-size: 26px;
+                margin-bottom: 50px;
+            }
+            .ourBusiness-title{
+                font-size: 24px;
+            }
+            .ourBusiness-desc{
+                font-size: 24px;
+            }
+            .topContainer-desc{
+                margin-top: 7%;
+            }
+            .content-container2-bottomContainer p:nth-child(odd) {
+                margin-bottom: 20px;
+            }
         }
     </style>
 
