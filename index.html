@@ -26,6 +26,7 @@
             padding: 0;
             background: #333;
             overflow: hidden;
+            font-size: 62.5%;
         }
 
         /*ul wrapper*/
@@ -70,7 +71,7 @@
         }
         .topmenu-container{
             width: 100%;
-            height: 48px;
+            height: 4.8rem;
             background-color: #1e316f;
             text-align: center;
             display: flex;
@@ -80,8 +81,8 @@
             
         }
         .topmenu-container-logo{
-            width: 46px;
-            height: 30px;
+            width: 4.6rem;
+            height: 3rem;
         }
         .topmenu-container-menu{
             position: absolute;
@@ -89,8 +90,8 @@
         }
         .topmenu-container-menu-right{
            color: white;
-           font-size: 5px;
-           margin-right: 15px; 
+           font-size: 2rem;
+           margin-right: 1.5rem; 
         }
 
         .content-container{
@@ -108,22 +109,22 @@
             left: 10%;
             top: 12%;
             /* height: 150px; */
-            width: 140px;
+            width: 14rem;
             background: white;
-            padding: 0 20px 0 20px;
+            padding: 0 2rem 0 2rem;
         }
         .branchName{
-            font-size:30px;
+            font-size:3rem;
             font-weight:bold;
-            margin-top:20px;
+            margin-top:2rem;
             margin-bottom:0px;
-            line-height:40px;
+            line-height:4rem;
             text-align:center;
             letter-spacing:1px;
         }
         .branchSlogan{
             text-align: center;
-            font-size: 12px;
+            font-size: 1.2rem;
             font-weight:400;
             margin-top:0px;
             letter-spacing: 2px;
@@ -131,23 +132,23 @@
         .brandSpliter{
             height: 0.5px;
             border: 0.5px solid black;
-            margin: 15px 30px 0 2px;
+            margin: 1.5rem 3rem 0 2px;
         }
         .branchDetail{
-            margin-top: 10px;
-            margin-bottom: 20px;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
             padding-left: 2px;
             letter-spacing:1px;
-            font-size: 14px;
+            font-size: 1.4rem;
             position: relative;
         }
         .branchDetail-arrow{
             position: absolute;
-            right: 30px;
-            top: 7px;
+            right: 3rem;
+            top: 0.7rem;
             content: '';
-            width: 4px;
-            height: 6px;
+            width: 0.4rem;
+            height: 0.6rem;
         }
         .content-container2{
             width: 100%;
@@ -160,13 +161,13 @@
 
         .content-container2-topContainer{
             width: 100%;
-            height: 55%;
+            height: 60%;
             background-color:#2c3f72;
             background-image: url(./static/logo.png);
             background-repeat: no-repeat;
-            background-position: 50% 15%;
-            background-size: 20%;
-            padding-top: 35%;
+            background-position: 50% 4rem;
+            background-size: 6rem;
+            padding-top: 12rem;
             overflow: hidden;
         }
 
@@ -178,20 +179,24 @@
             color: white;
             margin-left: 10%;
             margin-right: 10%;
-            padding-top: 10px;
-            padding-bottom: 10px;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
         }
         
         .topContainer-contact-item{
-            height: 10px;
+            font-size:1.2rem;
+        }
+
+        .topContainer-contact-item:nth-child(even){
+            margin-top: 0.5rem;
         }
 
         .topContainer-desc{
             margin-top: 6%;
-            margin-bottom: 10px;
+            margin-bottom: 1rem;
             color: white;
             font-weight: 300;
-            font-size: 12px;
+            font-size: 1.2rem;
             margin-left: 10%;
             margin-right: 10%;
         }
@@ -230,8 +235,19 @@
         }
 
         @media screen and (max-width:320px){
+            .topmenu-container {
+                width: 100%;
+                height: 3.8rem;
+            }
+            .topmenu-container-logo{
+                width: 3.1rem;
+                height: 2rem;
+            }
             .content-container2-topContainer{
                 height:58%;
+                background-size: 4rem;
+                padding-top: 8rem;
+                background-position: 50% 3rem;
             }
             .topContainer-desc{
                 margin-top:4%;
@@ -250,36 +266,32 @@
                 height: 63%;
             }
             .topContainer-desc {
-                margin-top: 15px;
+                margin-top: 4rem;
                 color: white;
                 font-weight: 300;
-                font-size: 20px;
+                font-size: 2rem;
                 margin-left: 10%;
                 margin-right: 10%;
             }
             .topContainer-contact-item {
-                height: 14px;
-                font-size: 20px;
+                font-size: 2.2rem;
             }
             .topContainer-contact {
-                padding-top: 20px;
-                padding-bottom: 20px;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
             }
             .topContainer-contact p:nth-child(1){
-                margin-bottom: 20px;
+                margin-bottom: 2rem;
             }
             .ourBusiness{
                 margin-top: 5%;
-                font-size: 20px;
+                font-size: 2rem;
             }
             .ourBusiness-title{
-                font-size: 18px;
+                font-size: 1.8rem;
             }
             .ourBusiness-desc{
-                font-size: 18px;
-            }
-            .topContainer-desc{
-                margin-top: 7%;
+                font-size: 1.8rem;
             }
         }
          /* ipad pro or pc*/
@@ -289,43 +301,43 @@
                 border-bottom: 2px solid white;
             } 
             .content-container2-topContainer{
-                height: 63%;
+                height: 60%;
             }
             .topContainer-desc {
                 margin-top: 15px;
                 color: white;
                 font-weight: 300;
-                font-size: 26px;
+                font-size: 2.6rem;
                 margin-left: 10%;
                 margin-right: 10%;
             }
             .topContainer-contact-item {
-                height: 25px;
-                font-size: 26px;
+                height: 2.5rem;
+                font-size: 2.6rem;
             }
             .topContainer-contact {
-                padding-top: 30px;
-                padding-bottom: 30px;
+                padding-top: 3rem;
+                padding-bottom: 3rem;
             }
             .topContainer-contact p:nth-child(1){
-                margin-bottom: 20px;
+                margin-bottom: 2rem;
             }
             .ourBusiness{
                 margin-top: 5%;
-                font-size: 26px;
-                margin-bottom: 50px;
+                font-size: 2.6rem;
+                margin-bottom: 5rem;
             }
             .ourBusiness-title{
-                font-size: 24px;
+                font-size: 2.4rem;
             }
             .ourBusiness-desc{
-                font-size: 24px;
+                font-size: 2.4rem;
             }
             .topContainer-desc{
                 margin-top: 7%;
             }
             .content-container2-bottomContainer p:nth-child(odd) {
-                margin-bottom: 20px;
+                margin-bottom: 2rem;
             }
         }
     </style>
@@ -365,8 +377,8 @@
         <div class="content-container2">
             <div class="content-container2-topContainer">
                 <div class="topContainer-contact">
-                    <p class="topContainer-contact-item">微信: ITSME STUDIO</p>
-                    <p class="topContainer-contact-item">Email: ITSME@163.com</p>
+                    <div class="topContainer-contact-item">微信: ITSME STUDIO</div>
+                    <div class="topContainer-contact-item">Email: ITSME@163.com </div>
                 </div>
                 <div class="topContainer-desc">
                     渠道扩展，市场挖崛，模式探索，一直是大部分公司的核心命题。随着现代审美的不断提高和信息传播效率的加速
